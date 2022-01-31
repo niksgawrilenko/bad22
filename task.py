@@ -1,7 +1,10 @@
 import statistics
 import time
+print('Enter name file (default "10m.txt" ): ')
 timer = time.time()
-text = open('../10m.txt', 'r').readlines()
+nameFile=input()
+timer = time.time()
+text = open('../'+ nameFile, 'r').readlines()
 lines = []
 for line in text:
     lines.append(int(line))
@@ -49,4 +52,4 @@ for index in range(len(lines)):
 			indexesMin=[]
 print("Min sequence:",lines[firstMin:firstMin+lensMin])
 
-print("time taken:", time.time()-timer)
+print("Time taken:", time.time()-timer, " I agree, it can be faster :)")
